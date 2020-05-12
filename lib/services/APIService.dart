@@ -14,7 +14,6 @@ class APIService {
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       final accessToken = data['access_token'];
-      print(accessToken);
       if (accessToken != null) {
         return accessToken;
       }
