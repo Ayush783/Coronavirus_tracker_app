@@ -29,13 +29,16 @@ class API {
       host: host,
       port: port,
       path: 'token',
-      queryParameters: {'grant_type': 'client_credentials'});
+      queryParameters: {'grant_type': 'client_credentials'}
+      );
 
   Uri endpointUri(Endpoint endpoint) => Uri(
       scheme: 'https',
       host: host,
       port: port,
-      path: '$basePath/${_path[endpoint]}');
+      path: '$basePath/${_path[endpoint]}',
+      queryParameters: {'country': 'World'}
+      );
 
   static Map<Endpoint, String> _path = {
     Endpoint.cases: 'cases',
