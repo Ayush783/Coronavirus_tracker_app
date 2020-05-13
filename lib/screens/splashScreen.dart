@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:coronavirus_tracker_app/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -17,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   }
 
   void navigationPage(){
-    Navigator.push(context, MaterialPageRoute(builder: (_)=> HomeScreen(),),);
+    Navigator.pushReplacementNamed(context, 'home');
   }
 
   AnimationController _controller;
