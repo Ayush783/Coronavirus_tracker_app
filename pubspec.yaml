@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   injectable: ^0.3.0
   freezed_annotation: ^0.7.1
+  auto_route: 0.6.7
   get_it: ^4.0.2
 
 dev_dependencies:
@@ -19,6 +20,7 @@ dev_dependencies:
     sdk: flutter
   build_runner: null
   injectable_generator: ^0.3.5
+  auto_route_generator: 0.6.7
   freezed: ^0.10.7
 
 flutter:
