@@ -9,12 +9,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../ui/country_wise_stats_screen/country_wise_stat_screen.dart';
 import '../ui/homescreen/homescreen.dart';
 
 class Routes {
   static const String homeScreen = '/';
+  static const String countryWiseStatScreen = '/country-wise-stat-screen';
   static const all = <String>{
     homeScreen,
+    countryWiseStatScreen,
   };
 }
 
@@ -23,6 +26,7 @@ class Router extends RouterBase {
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.homeScreen, page: HomeScreen),
+    RouteDef(Routes.countryWiseStatScreen, page: CountryWiseStatScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -30,6 +34,12 @@ class Router extends RouterBase {
     HomeScreen: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => HomeScreen(),
+        settings: data,
+      );
+    },
+    CountryWiseStatScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => CountryWiseStatScreen(),
         settings: data,
       );
     },

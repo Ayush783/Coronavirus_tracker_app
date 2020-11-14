@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:corona_tracker/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
 class CountryWiseStatsButton extends StatelessWidget {
@@ -9,7 +11,11 @@ class CountryWiseStatsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return RaisedButton(
-      onPressed: () {},
+      onPressed: () {
+        ExtendedNavigator.of(context).push(
+          Routes.countryWiseStatScreen,
+        );
+      },
       child: Padding(
         padding: EdgeInsets.all(size.height / 70),
         child: Center(

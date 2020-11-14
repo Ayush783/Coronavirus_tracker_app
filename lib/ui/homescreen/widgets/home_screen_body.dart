@@ -17,7 +17,10 @@ class HomeScreenBody extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.symmetric(
+          horizontal: size.height / 50,
+          vertical: size.height / 30,
+        ),
         child: Column(
           children: [
             Center(
