@@ -13,6 +13,7 @@ void main() {
         router: Router(),
       ),
       theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
