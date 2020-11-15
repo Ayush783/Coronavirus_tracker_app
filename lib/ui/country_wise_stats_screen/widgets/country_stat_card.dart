@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:corona_tracker/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
 class CountryStatCard extends StatelessWidget {
@@ -14,6 +16,9 @@ class CountryStatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        onTap: () {
+          ExtendedNavigator.of(context).push(Routes.countryStatScreen);
+        },
         leading: Image.asset(
           'assets/icons/exapmle_logo.png',
         ),

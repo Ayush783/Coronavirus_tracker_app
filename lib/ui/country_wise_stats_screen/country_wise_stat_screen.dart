@@ -1,4 +1,3 @@
-import 'package:corona_tracker/ui/country_wise_stats_screen/widgets/country_stat_card.dart';
 import 'package:corona_tracker/ui/country_wise_stats_screen/widgets/country_stat_screen_body.dart';
 import 'package:flutter/material.dart';
 
