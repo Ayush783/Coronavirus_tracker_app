@@ -1,4 +1,4 @@
-import 'package:corona_tracker/blocs/bloc/totalstats_bloc.dart';
+import 'package:corona_tracker/blocs/totalstats_bloc/totalstats_bloc.dart';
 import 'package:corona_tracker/entities/total_stats/total_stats.dart';
 import 'package:corona_tracker/ui/core/widgets/stat_card.dart';
 import 'package:flushbar/flushbar_helper.dart';

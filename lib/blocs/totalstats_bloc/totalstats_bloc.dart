@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:corona_tracker/entities/total_stats/total_stats.dart';
-import 'package:corona_tracker/failures/total_stats_failure.dart';
+import 'package:corona_tracker/failures/total_stats_failure/total_stats_failure.dart';
 import 'package:corona_tracker/repository/covidApi/covid_api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';

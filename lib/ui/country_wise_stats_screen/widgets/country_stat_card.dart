@@ -1,17 +1,15 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:corona_tracker/entities/country_wise_stats.dart/country_wise_stats.dart';
 import 'package:corona_tracker/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
 class CountryStatCard extends StatelessWidget {
   const CountryStatCard({
     Key key,
-    this.countryName,
-    this.todayConfirmed,
-    this.totalConfirmed,
+    this.stats,
   }) : super(key: key);
 
-  final String countryName;
-  final int todayConfirmed, totalConfirmed;
+  final CountryWiseStats stats;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -19,20 +17,24 @@ class CountryStatCard extends StatelessWidget {
         onTap: () {
           ExtendedNavigator.of(context).push(Routes.countryStatScreen);
         },
-        leading: Image.asset(
-          'assets/icons/exapmle_logo.png',
+        leading: Image.network(
+          'https://www.countryflags.io/${stats.CountryCode}/flat/64.png',
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) return child;
+            return CircularProgressIndicator();
+          },
         ),
         title: Text(
-          countryName,
+          stats.Country,
           style: Theme.of(context).textTheme.headline5,
         ),
         trailing: Text.rich(
           TextSpan(
-              text: '$totalConfirmed ',
+              text: '${stats.TotalConfirmed} ',
               style: Theme.of(context).textTheme.headline6,
               children: [
                 TextSpan(
-                  text: '($todayConfirmed)',
+                  text: '(${stats.NewConfirmed})',
                   style: Theme.of(context).textTheme.bodyText1.copyWith(
                         color: Colors.red,
                       ),
